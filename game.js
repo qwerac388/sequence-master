@@ -5,6 +5,7 @@ let started = false;
 let level = 0;
 
 function nextSequence() {
+  //reset to empty array ready for the next level
   userClickedPattern = [];
   level++;
   $("#level-title").text(`Level ${level}`);
@@ -70,5 +71,19 @@ function checkAnswer(currentLevel) {
     }
   } else {
     console.log("wrong");
+    //Apply sound, flash effect and changing h1 text for Game Over case
+    playSound("wrong");
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
+    //Restart the game
+    startOver();
   }
+}
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
 }
