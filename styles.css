@@ -5,14 +5,14 @@ body {
 
 #title {
   font-family: "Press Start 2P", cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 5%;
   color: #f1b709;
 }
 
 #level-title {
   font-family: "Press Start 2P", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 4%;
   color: #fef2bf;
 }
@@ -63,4 +63,28 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media (max-width: 600px) {
+  #title {
+    font-size: 2rem;
+  }
+
+  #level-title {
+    font-size: 1rem;
+  }
+
+  #instruction {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    height: 100px;
+    width: 100px;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+  }
 }
