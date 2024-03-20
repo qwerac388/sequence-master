@@ -51,8 +51,8 @@ function animatePress(currentColour) {
   }, 100);
 }
 
-//Detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence()
-$(document).keypress(function () {
+//Detect when the title has been pressed, when that happens for the first time, call nextSequence()
+$("#title").click(function () {
   if (!started) {
     $("#level-title").text(`Level ${level}`);
     nextSequence();
@@ -73,7 +73,7 @@ function checkAnswer(currentLevel) {
     console.log("wrong");
     //Apply sound, flash effect and changing h1 text for Game Over case
     playSound("wrong");
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Click Sequence Master to Restart");
     $("body").addClass("game-over");
     setTimeout(function () {
       $("body").removeClass("game-over");
