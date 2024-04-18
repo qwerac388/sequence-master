@@ -6,7 +6,7 @@ Sequence Master is a browser-based interactive memory game created with jQuery, 
 
 ## Preview
 
-![Preview of the Sequence Master Game](images/Preview.gif)
+![Preview of the Sequence Master Game](images/Game.jpg)
 
 ## Features
 

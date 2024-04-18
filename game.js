@@ -17,7 +17,7 @@ function nextSequence() {
   gamePattern.push(randomChosenColour);
   console.log(gamePattern);
 
-  //Show sequence to the user with flash animation and sound
+  //Show sequence to the user with flash animation and sound (game side, not user side)
   $(`#${randomChosenColour}`).fadeIn(100).fadeOut(100).fadeIn(100);
 
   playSound(randomChosenColour);
@@ -33,7 +33,7 @@ $(".btn").click(function () {
 
   playSound(userChosenColour);
 
-  //Add Animation to User Clicks
+  //Add Animation to what User Clicks
   animatePress(userChosenColour);
 
   checkAnswer(userClickedPattern.length - 1);
